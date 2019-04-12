@@ -11,8 +11,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://swapi.co/api/people/').then(response=> {
-      console.log(response);
+    this.getData();
+  }
+
+  getData = (data = 'people/') => {
+    let url = 'https://swapi.co/api/' + data;
+    console.log(url);
+    fetch(url).then(response => {
       return response.json();
     }).then(response => {
       this.setState({ people: response})
