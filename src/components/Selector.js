@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Selector extends Component {
   render() {
     const roots = this.props.roots;
-    console.log(roots);
     return (
       <div>
         {

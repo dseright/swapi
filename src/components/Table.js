@@ -4,7 +4,8 @@ import TableRow from './TableRow.js'
 class Table extends Component {
   render() {
     const data = this.props.data.results;
-    const tableLabels = Object.keys(data[0]);
+    const allTableLabels = Object.keys(data[0]);
+    const tableLabels = allTableLabels.slice(0, 2);
     return (
       <div>
         <table key="table">
@@ -19,8 +20,8 @@ class Table extends Component {
           </thead>
           <tbody key="tableBody">
           {
-            data.map((person, i) => {
-              return <TableRow person={person} i={i} key={i} />
+            data.map((item, i) => {
+              return <TableRow item={item} i={i} key={i} />
             })
           }
           </tbody>

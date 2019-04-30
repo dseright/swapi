@@ -2,16 +2,16 @@ import React, { Component } from 'react'
 
 class TableRow extends Component {
   render() {
-    const person = Object.values(this.props.person);
-    return (
+    const allItem = Object.values(this.props.item);
+    const item = allItem.splice(0, 2);
+    return(
       <tr key={this.props.i}>
         {
-          person.map((property, i) => {
-            if(property.length === 0 ){
-              return <td key={i}>None</td>
-            } else {
-              return (<td key={i}>{property}</td>)
+          item.map((item, i) => {
+            if (item.length === 0) {
+              return <td key={i}>None.</td>
             }
+            return <td key={i}>{item}</td>
           })
         }
       </tr>
