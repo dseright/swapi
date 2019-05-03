@@ -21,7 +21,7 @@ class Table extends Component {
           <tbody key="tableBody">
           {
             data.map((item, i) => {
-              return <TableRow item={item} i={i} key={i} />
+              return <TableRow item={item} i={i} key={i} changeData={this.props.changeData}/>
             })
           }
           </tbody>

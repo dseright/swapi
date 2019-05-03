@@ -11,6 +11,9 @@ class TableRow extends Component {
             if (item.length === 0) {
               return <td key={i}>None.</td>
             }
+            if (i === 0) {
+              return <td key={i}><a href="#" onClick={() => this.props.changeData(this.props.item.url)}>{item}</a></td>
+            }
             return <td key={i}>{item}</td>
           })
         }
