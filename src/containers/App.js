@@ -7,7 +7,8 @@ import Single from '../components/Single'
 /* Okay, so I've got the ability to change between the different choices (people, vehicles, etc...). Now I need to 
 only display the first couple of tidbits on the table, but make it possible to click on the name of the thing in question.
 Okay that's done, now I need to display the info in the object. That should be relative easy. Need to make sure I make the links clickable.
-Then it'll be fully navigatable. Also I need to style it at some point. */
+Then it'll be fully navigatable. 
+We have achieve full navigability. Also I need to style it at some point. */
 
 class App extends Component {
   constructor() {
