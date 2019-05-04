@@ -12,7 +12,7 @@ class TableRow extends Component {
               return <td key={i}>None.</td>
             }
             if (i === 0) {
-              return <td key={i}><a href="#" onClick={() => this.props.changeData(this.props.item.url)}>{item}</a></td>
+              return <td key={i}><button onClick={() => this.props.changeData(this.props.item.url)}>{item}</button></td>
             }
             return <td key={i}>{item}</td>
           })
