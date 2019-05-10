@@ -14,12 +14,8 @@ td > button, p > button {
   font: inherit;
   height: auto;
   padding: 0;
-<<<<<<< HEAD
-  padding-right: 4px;
-=======
   padding-left: 3px;
   padding-right: 3px;
->>>>>>> 9ce8801d61515acf78ee34422253c81a6ca39fe5
   perspective-origin: 0 0;
   text-align: start;
   text-decoration: underline;
