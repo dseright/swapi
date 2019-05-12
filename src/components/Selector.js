@@ -7,7 +7,7 @@ class Selector extends Component {
       <div>
         {
           Object.entries(roots).map(([resource, link], i) => {
-            return <button name={resource} key={i} onClick={() => this.props.changeData(link)}>{resource}</button>
+            return <button className='capitalize' name={resource} key={i} onClick={() => this.props.changeData(link)}>{resource}</button>
           })
         }
       </div>

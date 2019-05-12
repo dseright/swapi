@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 class Single extends Component {
-  
+
   render() {
     const data = Object.entries(this.props.data);
     const changeData = this.props.changeData;
     return(
         data.map(([key, value], i) => {
           let newValue = [];
+          let newKey = this.props.formatUnderscores(key);
           if (Array.isArray(value)) {
             value.forEach((link, j) => {
               newValue.push(<button key={j} onClick={() => changeData(link)}>{link}</button> );
@@ -17,8 +18,7 @@ class Single extends Component {
           } else {
             newValue.push(value);
           }
-          console.log(newValue);
-          return <p key={i}>{key}: {newValue}</p>
+          return <p key={i}><span className='capitalize'>{newKey}</span>: {newValue}</p>
       })
     )
   }

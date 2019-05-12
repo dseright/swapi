@@ -39,26 +39,32 @@ class App extends Component {
       return response.json();
     }).then(response => {
       this.setState({ data: response, next: response.next, prev: response.previous });
+      console.log(this.state.data);
     })  
-    
   }
 
-  nextPage = () => {
-    this.getData(this.state.next);
+  addButton = (title, stateLink) => {
+    if (stateLink) {
+      return <button key={title} onClick={() => this.changePage(stateLink)}>{title}</button>
+    }
   }
 
-  prevPage = () => {
-    this.getData(this.state.prev);
+  changePage = (stateLink) => {
+    this.getData(stateLink);
   }
 
   tableOrSingle = (dataObj) => {
     if (Array.isArray(this.state.data.results)) {
       if (this.state.data.results.length > 1) {
-        return <Table data={dataObj} changeData={this.getData}/>
+        return <Table data={dataObj} changeData={this.getData} formatUnderscores={this.formatUnderscores}/>
       }
     } else {
-      return <Single data={dataObj} changeData={this.getData}/>
+      return <Single data={dataObj} changeData={this.getData} formatUnderscores={this.formatUnderscores}/>
     }
+  }
+
+  formatUnderscores = (text) => {
+    return text.replace(/_/g, " ");
   }
 
   render() {
@@ -70,8 +76,8 @@ class App extends Component {
         <div className="App">
           <Selector changeData={this.getData} roots={this.state.roots}/>
           {this.tableOrSingle(data)}
-          <button onClick={this.prevPage}>Previous</button>
-          <button onClick={this.nextPage}>Next</button>
+          {this.addButton('Previous', this.state.prev)}
+          {this.addButton('Next', this.state.next)}
         </div>
       );
     }

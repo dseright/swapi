@@ -8,12 +8,12 @@ class Table extends Component {
     const tableLabels = allTableLabels.slice(0, 2);
     return (
       <div>
-        <table key="table">
+        <table className='center' key="table">
           <thead key="head">
             <tr key="headrow">
               {
                 tableLabels.map((label, i) => {
-                  return <th key={i}>{label}</th>
+                  return <th className='capitalize' key={i}>{this.props.formatUnderscores(label)}</th>
                 })
               }
             </tr>

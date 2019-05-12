@@ -12,7 +12,6 @@ td > button, p > button {
   cursor: pointer;
   display: inline;
   font: inherit;
-  height: auto;
   padding: 0;
   padding-left: 3px;
   padding-right: 3px;
@@ -20,7 +19,6 @@ td > button, p > button {
   text-align: start;
   text-decoration: underline;
   transform-origin: 0 0;
-  width: auto;
   -moz-appearance: none;
   -webkit-logical-height: 1em; /* Chrome ignores auto, so we have to use this hack to set the correct height  */
   -webkit-logical-width: auto; /* Chrome ignores auto, but here for completeness */
@@ -35,4 +33,13 @@ td > button, p > button {
     outline-style: dotted;
     outline-width: 1px;
   }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
