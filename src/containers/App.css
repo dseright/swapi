@@ -1,4 +1,5 @@
 .App {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -40,6 +41,11 @@ td > button, p > button {
 }
 
 .center {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.table {
+  margin-top: 10px;
+  width: 40%;
 }

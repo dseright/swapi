@@ -6,7 +6,8 @@ class Single extends Component {
     const data = Object.entries(this.props.data);
     const changeData = this.props.changeData;
     return(
-        data.map(([key, value], i) => {
+      <div className='center'>
+        {data.map(([key, value], i) => {
           let newValue = [];
           let newKey = this.props.formatUnderscores(key);
           if (Array.isArray(value)) {
@@ -19,7 +20,8 @@ class Single extends Component {
             newValue.push(value);
           }
           return <p key={i}><span className='capitalize'>{newKey}</span>: {newValue}</p>
-      })
+      })}
+      </div>
     )
   }
 }

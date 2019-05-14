@@ -39,7 +39,6 @@ class App extends Component {
       return response.json();
     }).then(response => {
       this.setState({ data: response, next: response.next, prev: response.previous });
-      console.log(this.state.data);
     })  
   }
 

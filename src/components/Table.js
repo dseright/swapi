@@ -8,7 +8,7 @@ class Table extends Component {
     const tableLabels = allTableLabels.slice(0, 2);
     return (
       <div>
-        <table className='center' key="table">
+        <table className='center table table-striped table-sm' key="table">
           <thead key="head">
             <tr key="headrow">
               {
