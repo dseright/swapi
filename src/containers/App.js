@@ -44,7 +44,7 @@ class App extends Component {
 
   addButton = (title, stateLink) => {
     if (stateLink) {
-      return <button key={title} onClick={() => this.changePage(stateLink)}>{title}</button>
+      return <button key={title} className= 'btn btn-secondary'onClick={() => this.changePage(stateLink)}>{title}</button>
     }
   }
 
